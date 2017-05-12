@@ -1,0 +1,8 @@
+<!DOCTYPE html ><html><head><script src="angular.min.js"></script><script src="customerManagement.js"></script><link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"><link href="orderlist.css" rel="stylesheet"/>  </head><body ng-app="ordersList" ng-controller="myControls">
+<div "w3-container" ><pclass=>the current balance is INR {{balance}}.</p>
+</div>
+<table border="1" width="100%" >
+<tr ><th>S No.</th><th ng-click="sortBy('transactionDate')" >Transaction Date</th><th ng-click="sortBy('withdrawalAmount')">Withdrawal Amount</th><th>Balance</th></tr>
+<tr class="alignCenter" ng-repeat="x in orders | orderBy:orderValue"><td>{{x.Sno}}</td><td>{{x.transactionDate}}</td><td>{{x.withdrawalAmount}}</td><td>{{balance-x.withdrawalAmount}}</td></tr>
+</table></body>
+</html>
